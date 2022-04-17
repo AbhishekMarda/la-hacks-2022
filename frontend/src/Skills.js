@@ -1,5 +1,5 @@
 import { Link, Navigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     Typography,
     AppBar,
@@ -29,6 +29,14 @@ function Skills() {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const [people, setPeople] = useState({});
+
+    useEffect(() => {
+        setup();
+    }, []);
+
+    console.log(people);
+
     let skills = [];
     let company = "";
     if (location.state) {
@@ -37,8 +45,26 @@ function Skills() {
     } else skills = [];
     console.log(company);
 
-    const [search, setSearch] = useState(false);
-    const [missed, setMissed] = useState(location.state);
+    async function setup() {
+        const serverUrl = "http://localhost:105";
+        let requestUri = serverUrl + "/getPeopleInCompany";
+        let pplJSON = {
+            companyID: company,
+            role: "engineering",
+            subrole: "software",
+            skills: [], // this does nothing, i just have it just in case
+        };
+        fetch(requestUri, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(pplJSON),
+        })
+            .then((response) => response.json())
+            .then((data) => setPeople(data));
+    }
 
     const HandleHome = (event) => {
         event.preventDefault();
@@ -48,11 +74,6 @@ function Skills() {
     const HandleBack = (event) => {
         event.preventDefault();
         navigate("/companies");
-    };
-
-    const HandleSearch = (event) => {
-        event.preventDefault();
-        setSearch(true);
     };
 
     return (
@@ -74,10 +95,8 @@ function Skills() {
                             />
                         </Box>
                         <Typography variant="h6">
-                            {/* <Link to="/companies" className="link">Companies</Link>
-                                <Link to="/skills" className="link">Skills</Link> */}
                             <Button
-                                variant="contained"
+                                // variant="contained"
                                 startIcon={<ArrowBack />}
                                 onClick={HandleBack}
                             >
@@ -90,17 +109,23 @@ function Skills() {
                     <div className="container">
                         <Container maxWidth="sm">
                             <Typography
-                                variant="h2"
+                                variant="h1"
                                 align="center"
                                 color="textPrimary"
                                 gutterBottom
                                 className="Header"
                             >
-                                {company} {"\n"} Gain These Skills:
+                                Get into {company}
                             </Typography>
-                            {/* <div className="search">
-                                    <SearchBar placeholder="Search a company!" onChange={HandleSearch}></SearchBar>
-                                </div> */}
+                            <Typography
+                                variant="h3"
+                                align="center"
+                                color="textPrimary"
+                                gutterBottom
+                                className="Header"
+                            >
+                                by learning these skills:
+                            </Typography>
                         </Container>
                     </div>
                     <div>
@@ -112,7 +137,9 @@ function Skills() {
                                             <CardContent className="cardContent">
                                                 <Typography
                                                     variant="h5"
-                                                    gutterBottom
+                                                    align="center"
+                                                    color="textPrimary"
+                                                    className="Header"
                                                 >
                                                     {skill}
                                                 </Typography>
@@ -127,36 +154,58 @@ function Skills() {
                     <div className="container">
                         <Container maxWidth="sm">
                             <Typography
-                                variant="h5"
+                                variant="h2"
                                 align="center"
-                                color="textSecondary"
-                                paragraph
+                                color="textPrimary"
+                                className="Header"
                             >
-                                Some people to connect with:
+                                Some people to connect with here:
                             </Typography>
                         </Container>
                         <Container className="cardGrid">
                             <Grid container spacing={4}>
-                                {companyRecommended.map((company) => (
-                                    <Grid item key={company} sm={6} m={4}>
+                                {Object.keys(people).map((keyName, i) => (
+                                    <Grid item key={i} sm={6} m={4}>
                                         <Card className="card">
                                             <CardMedia
                                                 className="cardMedia"
-                                                image="https://source.unsplash.com/random"
+                                                image="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
                                                 title="Company Name"
                                             />
                                             <CardContent className="cardContent">
                                                 <Typography
-                                                    variant="h5"
-                                                    gutterBottom
+                                                    variant="h4"
+                                                    align="center"
+                                                    color="textPrimary"
+                                                    className="Header"
                                                 >
-                                                    Company
+                                                    {"Name: " +
+                                                        people[keyName]
+                                                            .first_name +
+                                                        " " +
+                                                        people[keyName]
+                                                            .last_name}
                                                 </Typography>
                                                 <Typography
                                                     variant="h5"
-                                                    gutterBottom
+                                                    align="center"
+                                                    color="textPrimary"
+                                                    className="Header"
                                                 >
-                                                    Skills you can learn??
+                                                    {"Email: " +
+                                                        people[keyName]
+                                                            .professional_email}
+                                                </Typography>
+                                                <Typography
+                                                    variant="h5"
+                                                    align="center"
+                                                    color="textPrimary"
+                                                    className="Header"
+                                                >
+                                                    {"Their top skills: " +
+                                                        people[keyName].skills
+                                                            .slice(0, 6)
+                                                            .join(", ")}
                                                 </Typography>
                                             </CardContent>
                                         </Card>

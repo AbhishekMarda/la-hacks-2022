@@ -54,7 +54,7 @@ function Companies() {
     async function setup() {
         let id = "";
         if (location.state) id = location.state.id;
-        else id = "sanchit1591";
+        else id = "";
         const serverUrl = "http://localhost:105";
         let requestUri = serverUrl + "/getSkillsFromId?id=" + id;
         getSkills(requestUri)
@@ -65,34 +65,12 @@ function Companies() {
                 return skillsJSON;
             })
             .then(
-                // let skillsJSON = {
-                //     skills: [
-                //         "matlab",
-                //         "python",
-                //         "microsoft office",
-                //         "npm",
-                //         "leadership",
-                //         "bootstrap",
-                //         "git",
-                //         "public speaking",
-                //         "javascript",
-                //         "c++",
-                //         "html5",
-                //         "react.js",
-                //         "css",
-                //         "sql",
-                //     ],
-                // };
                 (skillsJSON) => {
                     getCompanies(
                         serverUrl + "/getTopCompanies",
                         skillsJSON
                     ).then((data) => {
                         let comp = data;
-                        // let tempComp = [];
-                        // for (const [key, value] of Object.entries(comp)) {
-                        //     tempComp.push(key);
-                        // }
                         setCompanies(data);
                     });
                 }
@@ -135,13 +113,13 @@ function Companies() {
                     <div className="container">
                         <Container maxWidth="sm">
                             <Typography
-                                variant="h2"
+                                variant="h1"
                                 align="center"
                                 color="textPrimary"
                                 gutterBottom
                                 className="Header"
                             >
-                                Companies
+                                Top Company Matches.
                             </Typography>
                         </Container>
                     </div>
@@ -158,17 +136,26 @@ function Companies() {
                                         />
                                         <CardContent className="classes.cardContent">
                                             <Typography
-                                                variant="h5"
-                                                gutterBottom
+                                                variant="h3"
+                                                align="center"
+                                                color="textPrimary"
+                                                className="Header"
                                             >
                                                 {companies[keyName].name}
                                             </Typography>
-                                            <Typography>
+                                            <Typography
+                                             variant="h5"
+                                             align="center"
+                                             color="textPrimary"
+                                             className="Header">
                                                 Software Engineer
                                             </Typography>
                                             <Typography
                                                 variant="h5"
+                                                align="center"
+                                                color="textPrimary"
                                                 gutterBottom
+                                                className="Header"
                                             >
                                                 {"Matched Skills: " +
                                                     companies[
@@ -179,6 +166,7 @@ function Companies() {
                                         <CardActions>
                                             <Button
                                                 color="primary"
+                                                
                                                 onClick={() => {
                                                     // console.log(
                                                     //     companies[keyName].missingSkills
