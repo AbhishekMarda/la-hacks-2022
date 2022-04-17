@@ -11,13 +11,15 @@ function Companies() {
 
     const navigate = useNavigate();
 
-    const [home, setHome] = useState(false);
-
     const HandleHome =  (event) => {
         event.preventDefault();
-        setHome(true);
         navigate("/");
     };
+
+    const HandleMore = (event) => {
+        event.preventDefault();
+        navigate("/skills");
+    }
 
     return (
         <div className="Companies">
@@ -26,16 +28,16 @@ function Companies() {
                     <AppBar position="relative" className="nav" style={{background: "#4877b6"}}>
                         <Toolbar>
                             <img src="favicon.ico" alt="Query Compatible" className="logo" onClick={HandleHome}/>
-                            <Typography variant = "h6">
+                            {/* <Typography variant = "h6">
                                 <Link to="/companies" className="link">Companies</Link>
                                 <Link to="/skills" className="link">Skills</Link>
-                            </Typography>
+                            </Typography> */}
                         </Toolbar>
                     </AppBar>
                     <main>
                         <div className="container">
                             <Container maxWidth="sm">
-                                <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
+                                <Typography variant="h2" align="center" color="textPrimary" gutterBottom className="Header">
                                     Companies
                                 </Typography>
                             </Container>
@@ -59,8 +61,8 @@ function Companies() {
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
-                                        <Button color="primary">
-                                            Connect with an employee from here!
+                                        <Button color="primary" onClick={HandleMore}>
+                                            Learn more about this company!
                                         </Button> 
                                     </CardActions>
                                 </Card>
