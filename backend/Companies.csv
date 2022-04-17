@@ -1,0 +1,631 @@
+adobe,java,400,1
+adobe,javascript,345,2
+adobe,c++,266,3
+adobe,html,262,4
+adobe,sql,257,5
+adobe,python,217,6
+adobe,c,215,7
+adobe,mysql,207,8
+adobe,linux,182,9
+adobe,software development,179,10
+adobe,css,162,11
+adobe,microsoft office,160,12
+adobe,git,155,13
+adobe,php,140,14
+adobe,jquery,119,15
+adobe,xml,116,16
+adobe,agile methodologies,115,17
+adobe,node.js,113,18
+adobe,programming,110,19
+adobe,c#,102,20
+amazon,java,2761,1
+amazon,python,2228,2
+amazon,c++,2155,3
+amazon,javascript,1916,4
+amazon,c,1683,5
+amazon,sql,1672,6
+amazon,html,1459,7
+amazon,linux,1205,8
+amazon,microsoft office,1086,9
+amazon,mysql,1069,10
+amazon,software development,1013,11
+amazon,c#,881,12
+amazon,matlab,845,13
+amazon,git,804,14
+amazon,algorithms,798,15
+amazon,programming,794,16
+amazon,css,754,17
+amazon,microsoft excel,694,18
+amazon,machine learning,650,19
+amazon,php,636,20
+any-service-company,java,1,1
+any-service-company,html,1,2
+any-service-company,c++,1,3
+any-service-company,c,1,4
+any-service-company,english,1,5
+aut-nomo_23,javascript,10,1
+aut-nomo_23,mysql,9,2
+aut-nomo_23,jquery,7,3
+aut-nomo_23,css,7,4
+aut-nomo_23,java,7,5
+aut-nomo_23,php,7,6
+aut-nomo_23,html,6,7
+aut-nomo_23,sql,6,8
+aut-nomo_23,desarrollo de software,5,9
+aut-nomo_23,html5,5,10
+aut-nomo_23,c#,5,11
+aut-nomo_23,linux,5,12
+aut-nomo_23,microsoft office,4,13
+aut-nomo_23,microsoft sql server,4,14
+aut-nomo_23,web development,4,15
+aut-nomo_23,git,3,16
+aut-nomo_23,photoshop,3,17
+aut-nomo_23,c++,3,18
+aut-nomo_23,software development,3,19
+aut-nomo_23,node.js,3,20
+cisco,c,1867,1
+cisco,java,1805,2
+cisco,c++,1646,3
+cisco,linux,1630,4
+cisco,python,1400,5
+cisco,javascript,1151,6
+cisco,sql,1101,7
+cisco,html,1005,8
+cisco,software development,872,9
+cisco,microsoft office,793,10
+cisco,unix,729,11
+cisco,mysql,684,12
+cisco,programming,597,13
+cisco,tcp/ip,590,14
+cisco,embedded systems,556,15
+cisco,agile methodologies,526,16
+cisco,microsoft excel,478,17
+cisco,matlab,465,18
+cisco,git,460,19
+cisco,css,450,20
+doordash,java,429,1
+doordash,javascript,352,2
+doordash,python,302,3
+doordash,c++,268,4
+doordash,sql,266,5
+doordash,c,244,6
+doordash,html,243,7
+doordash,mysql,193,8
+doordash,linux,191,9
+doordash,software development,167,10
+doordash,css,166,11
+doordash,git,148,12
+doordash,jquery,127,13
+doordash,php,122,14
+doordash,microsoft office,120,15
+doordash,c#,115,16
+doordash,programming,113,17
+doordash,node.js,108,18
+doordash,algorithms,100,19
+doordash,agile methodologies,99,20
+ebay,java,260,1
+ebay,javascript,193,2
+ebay,sql,170,3
+ebay,python,156,4
+ebay,c++,145,5
+ebay,html,134,6
+ebay,mysql,122,7
+ebay,c,111,8
+ebay,software development,106,9
+ebay,linux,96,10
+ebay,css,91,11
+ebay,jquery,82,12
+ebay,git,77,13
+ebay,php,71,14
+ebay,xml,69,15
+ebay,microsoft office,69,16
+ebay,agile methodologies,67,17
+ebay,eclipse,62,18
+ebay,programming,59,19
+ebay,c#,59,20
+epam-systems,javascript,1153,1
+epam-systems,sql,881,2
+epam-systems,html,839,3
+epam-systems,git,831,4
+epam-systems,java,789,5
+epam-systems,css,613,6
+epam-systems,mysql,591,7
+epam-systems,jquery,555,8
+epam-systems,html5,466,9
+epam-systems,c#,448,10
+epam-systems,xml,338,11
+epam-systems,software development,318,12
+epam-systems,c++,312,13
+epam-systems,linux,311,14
+epam-systems,cascading style sheets,295,15
+epam-systems,php,295,16
+epam-systems,microsoft office,294,17
+epam-systems,scrum,283,18
+epam-systems,bootstrap,283,19
+epam-systems,python,279,20
+facebook,java,5676,1
+facebook,c++,4694,2
+facebook,python,4531,3
+facebook,javascript,3942,4
+facebook,c,3798,5
+facebook,sql,3049,6
+facebook,linux,2854,7
+facebook,software development,2717,8
+facebook,html,2622,9
+facebook,algorithms,2432,10
+facebook,mysql,2082,11
+facebook,programming,1912,12
+facebook,git,1843,13
+facebook,c#,1839,14
+facebook,software engineering,1724,15
+facebook,css,1690,16
+facebook,matlab,1626,17
+facebook,php,1598,18
+facebook,microsoft office,1281,19
+facebook,machine learning,1281,20
+fiverr-com,javascript,25,1
+fiverr-com,java,24,2
+fiverr-com,software development,19,3
+fiverr-com,sql,18,4
+fiverr-com,c++,18,5
+fiverr-com,html,17,6
+fiverr-com,web development,14,7
+fiverr-com,php,13,8
+fiverr-com,linux,13,9
+fiverr-com,mysql,12,10
+fiverr-com,c,11,11
+fiverr-com,object oriented programming,11,12
+fiverr-com,c#,11,13
+fiverr-com,python,11,14
+fiverr-com,git,10,15
+fiverr-com,cascading style sheets,9,16
+fiverr-com,css,9,17
+fiverr-com,node.js,9,18
+fiverr-com,databases,9,19
+fiverr-com,android development,8,20
+flipkart,c++,67,1
+flipkart,java,63,2
+flipkart,c,55,3
+flipkart,python,51,4
+flipkart,javascript,51,5
+flipkart,data structures,49,6
+flipkart,html,49,7
+flipkart,sql,41,8
+flipkart,algorithms,41,9
+flipkart,mysql,35,10
+flipkart,linux,31,11
+flipkart,microsoft office,28,12
+flipkart,programming,25,13
+flipkart,php,23,14
+flipkart,android development,20,15
+flipkart,core java,19,16
+flipkart,microsoft excel,19,17
+flipkart,cascading style sheets,19,18
+flipkart,git,18,19
+flipkart,web development,18,20
+google,java,15253,1
+google,python,13564,2
+google,c++,13445,3
+google,c,10785,4
+google,javascript,9505,5
+google,linux,8062,6
+google,sql,7409,7
+google,algorithms,6951,8
+google,html,6747,9
+google,software development,6321,10
+google,programming,5733,11
+google,matlab,5373,12
+google,mysql,4715,13
+google,git,4527,14
+google,machine learning,4297,15
+google,software engineering,4244,16
+google,microsoft office,4130,17
+google,css,4028,18
+google,c#,3953,19
+google,php,3200,20
+grabapp,java,116,1
+grabapp,javascript,98,2
+grabapp,c++,82,3
+grabapp,python,70,4
+grabapp,html,68,5
+grabapp,mysql,64,6
+grabapp,sql,62,7
+grabapp,c,51,8
+grabapp,microsoft office,45,9
+grabapp,php,44,10
+grabapp,web development,39,11
+grabapp,node.js,38,12
+grabapp,css,37,13
+grabapp,software development,37,14
+grabapp,linux,37,15
+grabapp,git,36,16
+grabapp,algorithms,35,17
+grabapp,programming,34,18
+grabapp,data structures,33,19
+grabapp,c#,29,20
+lenovo,linux,30,1
+lenovo,java,24,2
+lenovo,software development,22,3
+lenovo,c++,22,4
+lenovo,testing,20,5
+lenovo,sql,19,6
+lenovo,c,18,7
+lenovo,embedded systems,16,8
+lenovo,python,14,9
+lenovo,integration,14,10
+lenovo,cloud computing,13,11
+lenovo,unix,13,12
+lenovo,software engineering,13,13
+lenovo,javascript,13,14
+lenovo,storage,13,15
+lenovo,debugging,12,16
+lenovo,agile methodologies,12,17
+lenovo,xml,12,18
+lenovo,embedded software,11,19
+lenovo,operating systems,10,20
+linkedin,java,623,1
+linkedin,python,556,2
+linkedin,javascript,467,3
+linkedin,c++,455,4
+linkedin,c,388,5
+linkedin,sql,381,6
+linkedin,html,375,7
+linkedin,mysql,276,8
+linkedin,linux,270,9
+linkedin,microsoft office,238,10
+linkedin,css,207,11
+linkedin,algorithms,206,12
+linkedin,software development,203,13
+linkedin,matlab,201,14
+linkedin,git,189,15
+linkedin,node.js,165,16
+linkedin,programming,160,17
+linkedin,machine learning,156,18
+linkedin,microsoft excel,153,19
+linkedin,cascading style sheets,149,20
+mercadolibre,javascript,236,1
+mercadolibre,java,210,2
+mercadolibre,sql,183,3
+mercadolibre,mysql,174,4
+mercadolibre,html,150,5
+mercadolibre,microsoft sql server,124,6
+mercadolibre,jquery,124,7
+mercadolibre,php,117,8
+mercadolibre,linux,116,9
+mercadolibre,git,116,10
+mercadolibre,c#,107,11
+mercadolibre,css,104,12
+mercadolibre,microsoft office,100,13
+mercadolibre,scrum,93,14
+mercadolibre,html5,88,15
+mercadolibre,desarrollo de software,80,16
+mercadolibre,c++,75,17
+mercadolibre,bootstrap,69,18
+mercadolibre,angularjs,65,19
+mercadolibre,xml,62,20
+microsoft,java,6660,1
+microsoft,c++,5712,2
+microsoft,python,5264,3
+microsoft,javascript,4959,4
+microsoft,c,4581,5
+microsoft,sql,4198,6
+microsoft,html,3977,7
+microsoft,c#,3581,8
+microsoft,microsoft office,3155,9
+microsoft,software development,2953,10
+microsoft,linux,2847,11
+microsoft,mysql,2434,12
+microsoft,programming,2309,13
+microsoft,css,1999,14
+microsoft,git,1946,15
+microsoft,algorithms,1866,16
+microsoft,microsoft excel,1865,17
+microsoft,matlab,1679,18
+microsoft,leadership,1649,19
+microsoft,php,1578,20
+netsuite,javascript,42,1
+netsuite,java,41,2
+netsuite,sql,38,3
+netsuite,html,33,4
+netsuite,linux,22,5
+netsuite,css,21,6
+netsuite,xml,20,7
+netsuite,php,20,8
+netsuite,software development,19,9
+netsuite,c#,19,10
+netsuite,mysql,19,11
+netsuite,git,18,12
+netsuite,python,18,13
+netsuite,c++,15,14
+netsuite,jquery,13,15
+netsuite,c,12,16
+netsuite,microsoft office,12,17
+netsuite,agile methodologies,9,18
+netsuite,web development,9,19
+netsuite,microsoft sql server,9,20
+no-company_8,javascript,1,1
+no-company_8,node.js,1,2
+no-company_8,cascading style sheets,1,3
+no-company_8,angularjs,1,4
+no-company_8,express.js,1,5
+no-company_8,mongodb,1,6
+nvidia,c++,331,1
+nvidia,c,293,2
+nvidia,java,265,3
+nvidia,python,262,4
+nvidia,linux,201,5
+nvidia,javascript,137,6
+nvidia,sql,134,7
+nvidia,algorithms,126,8
+nvidia,software development,122,9
+nvidia,programming,120,10
+nvidia,microsoft office,118,11
+nvidia,html,113,12
+nvidia,matlab,99,13
+nvidia,c#,88,14
+nvidia,mysql,85,15
+nvidia,embedded systems,83,16
+nvidia,git,80,17
+nvidia,data structures,72,18
+nvidia,debugging,70,19
+nvidia,microsoft excel,63,20
+paypal,java,390,1
+paypal,javascript,312,2
+paypal,sql,262,3
+paypal,c++,245,4
+paypal,python,245,5
+paypal,html,234,6
+paypal,mysql,189,7
+paypal,c,187,8
+paypal,linux,151,9
+paypal,microsoft office,142,10
+paypal,software development,129,11
+paypal,css,124,12
+paypal,git,117,13
+paypal,node.js,112,14
+paypal,jquery,111,15
+paypal,xml,102,16
+paypal,agile methodologies,100,17
+paypal,php,95,18
+paypal,microsoft excel,90,19
+paypal,html5,84,20
+red-hat,python,280,1
+red-hat,linux,257,2
+red-hat,java,247,3
+red-hat,c,210,4
+red-hat,c++,194,5
+red-hat,javascript,188,6
+red-hat,sql,170,7
+red-hat,git,157,8
+red-hat,html,151,9
+red-hat,mysql,129,10
+red-hat,software development,129,11
+red-hat,microsoft office,100,12
+red-hat,bash,93,13
+red-hat,programming,89,14
+red-hat,shell scripting,87,15
+red-hat,php,78,16
+red-hat,css,70,17
+red-hat,docker,68,18
+red-hat,unix,67,19
+red-hat,microsoft excel,62,20
+salesforce,java,502,1
+salesforce,javascript,396,2
+salesforce,sql,326,3
+salesforce,python,316,4
+salesforce,c++,303,5
+salesforce,html,302,6
+salesforce,c,263,7
+salesforce,microsoft office,196,8
+salesforce,linux,194,9
+salesforce,software development,187,10
+salesforce,css,181,11
+salesforce,mysql,166,12
+salesforce,agile methodologies,153,13
+salesforce,programming,131,14
+salesforce,c#,127,15
+salesforce,microsoft excel,125,16
+salesforce,php,124,17
+salesforce,jquery,123,18
+salesforce,git,122,19
+salesforce,xml,114,20
+sap,java,275,1
+sap,sql,197,2
+sap,javascript,196,3
+sap,c++,171,4
+sap,c,133,5
+sap,html,130,6
+sap,software development,124,7
+sap,python,120,8
+sap,linux,107,9
+sap,mysql,103,10
+sap,microsoft office,95,11
+sap,xml,95,12
+sap,c#,90,13
+sap,eclipse,83,14
+sap,agile methodologies,79,15
+sap,css,77,16
+sap,microsoft excel,61,17
+sap,programming,60,18
+sap,java enterprise edition,57,19
+sap,git,55,20
+sas,java,29,1
+sas,sql,26,2
+sas,software development,22,3
+sas,linux,20,4
+sas,agile methodologies,20,5
+sas,c++,20,6
+sas,unix,16,7
+sas,c,15,8
+sas,xml,14,9
+sas,eclipse,12,10
+sas,mysql,11,11
+sas,javascript,10,12
+sas,databases,10,13
+sas,python,10,14
+sas,software engineering,9,15
+sas,html,9,16
+sas,microsoft office,8,17
+sas,jsp,7,18
+sas,c#,7,19
+sas,java enterprise edition,7,20
+shopee,java,108,1
+shopee,python,101,2
+shopee,javascript,94,3
+shopee,c++,82,4
+shopee,mysql,60,5
+shopee,html,59,6
+shopee,c,51,7
+shopee,sql,46,8
+shopee,git,44,9
+shopee,php,39,10
+shopee,linux,39,11
+shopee,algorithms,37,12
+shopee,microsoft office,34,13
+shopee,node.js,33,14
+shopee,programming,32,15
+shopee,c#,31,16
+shopee,react.js,31,17
+shopee,web development,30,18
+shopee,software development,30,19
+shopee,cascading style sheets,26,20
+tencentglobal,c++,126,1
+tencentglobal,java,95,2
+tencentglobal,python,92,3
+tencentglobal,linux,92,4
+tencentglobal,c,80,5
+tencentglobal,javascript,70,6
+tencentglobal,mysql,57,7
+tencentglobal,software development,49,8
+tencentglobal,sql,33,9
+tencentglobal,html,32,10
+tencentglobal,php,31,11
+tencentglobal,algorithms,28,12
+tencentglobal,machine learning,27,13
+tencentglobal,software engineering,25,14
+tencentglobal,programming,23,15
+tencentglobal,c#,23,16
+tencentglobal,hadoop,21,17
+tencentglobal,matlab,19,18
+tencentglobal,distributed systems,19,19
+tencentglobal,web development,19,20
+uber-com,java,577,1
+uber-com,python,492,2
+uber-com,c++,460,3
+uber-com,javascript,439,4
+uber-com,c,380,5
+uber-com,sql,370,6
+uber-com,html,324,7
+uber-com,linux,266,8
+uber-com,mysql,262,9
+uber-com,git,221,10
+uber-com,algorithms,211,11
+uber-com,software development,204,12
+uber-com,css,202,13
+uber-com,programming,180,14
+uber-com,microsoft office,178,15
+uber-com,matlab,160,16
+uber-com,c#,158,17
+uber-com,php,150,18
+uber-com,node.js,129,19
+uber-com,jquery,126,20
+upwork,javascript,71,1
+upwork,html,52,2
+upwork,java,49,3
+upwork,php,49,4
+upwork,mysql,45,5
+upwork,sql,44,6
+upwork,python,36,7
+upwork,web development,34,8
+upwork,c#,33,9
+upwork,jquery,33,10
+upwork,software development,31,11
+upwork,git,30,12
+upwork,c++,30,13
+upwork,cascading style sheets,27,14
+upwork,css,27,15
+upwork,microsoft office,25,16
+upwork,microsoft sql server,25,17
+upwork,html5,24,18
+upwork,linux,21,19
+upwork,ajax,20,20
+virtusa,java,203,1
+virtusa,javascript,167,2
+virtusa,html,149,3
+virtusa,sql,142,4
+virtusa,c++,111,5
+virtusa,c,110,6
+virtusa,microsoft office,106,7
+virtusa,mysql,95,8
+virtusa,microsoft excel,76,9
+virtusa,c#,72,10
+virtusa,microsoft word,67,11
+virtusa,core java,66,12
+virtusa,php,65,13
+virtusa,cascading style sheets,62,14
+virtusa,software development,58,15
+virtusa,python,55,16
+virtusa,css,48,17
+virtusa,xml,45,18
+virtusa,hibernate,44,19
+virtusa,leadership,44,20
+vmware,java,237,1
+vmware,c++,181,2
+vmware,python,175,3
+vmware,javascript,163,4
+vmware,linux,148,5
+vmware,c,146,6
+vmware,sql,145,7
+vmware,software development,126,8
+vmware,html,116,9
+vmware,mysql,97,10
+vmware,git,94,11
+vmware,microsoft office,82,12
+vmware,programming,69,13
+vmware,algorithms,65,14
+vmware,agile methodologies,64,15
+vmware,css,61,16
+vmware,unix,61,17
+vmware,c#,60,18
+vmware,xml,58,19
+vmware,eclipse,54,20
+yahoo,java,141,1
+yahoo,c++,109,2
+yahoo,javascript,109,3
+yahoo,python,102,4
+yahoo,c,85,5
+yahoo,linux,81,6
+yahoo,sql,77,7
+yahoo,mysql,72,8
+yahoo,html,69,9
+yahoo,software development,56,10
+yahoo,css,56,11
+yahoo,php,52,12
+yahoo,algorithms,41,13
+yahoo,git,41,14
+yahoo,hadoop,38,15
+yahoo,eclipse,37,16
+yahoo,matlab,34,17
+yahoo,microsoft office,33,18
+yahoo,agile methodologies,32,19
+yahoo,jquery,32,20
+youtube,java,284,1
+youtube,python,246,2
+youtube,c++,230,3
+youtube,javascript,201,4
+youtube,c,175,5
+youtube,html,138,6
+youtube,sql,120,7
+youtube,linux,117,8
+youtube,matlab,96,9
+youtube,software development,94,10
+youtube,microsoft office,92,11
+youtube,mysql,90,12
+youtube,programming,88,13
+youtube,css,86,14
+youtube,algorithms,79,15
+youtube,git,75,16
+youtube,machine learning,69,17
+youtube,php,64,18
+youtube,microsoft excel,62,19
+youtube,c#,62,20
