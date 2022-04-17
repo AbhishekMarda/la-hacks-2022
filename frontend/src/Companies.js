@@ -14,17 +14,21 @@ import {
 } from "@material-ui/core";
 import "./styles/Skills.css";
 import { StylesProvider } from "@material-ui/core";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-const cards = [1, 2, 3, 4, 5];
+const cards = [1, 2, 3, 4];
 
 function Companies() {
-    const [companies, setCompanies] = useState([]);
     const navigate = useNavigate();
     const location = useLocation();
-    setup();
+
+    const [companies, setCompanies] = useState([]);
+    useEffect(() => {
+        setup();
+    }, []);
+    console.log(companies);
 
     async function getSkills(uri) {
         const response = await fetch(uri, {
@@ -40,7 +44,6 @@ function Companies() {
             mode: "cors",
             headers: {
                 "Content-Type": "application/json",
-                // 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: JSON.stringify(skillsJSON),
         });
@@ -61,22 +64,50 @@ function Companies() {
                 };
                 return skillsJSON;
             })
-            .then((skillsJSON) => {
-                console.log(skillsJSON);
-                getCompanies(serverUrl + "/getTopCompanies", skillsJSON).then(
-                    (data) => {
-                        // for (let company in data) {
-                        //     setCompanies((arr) => [...arr, { company }]);
+            .then(
+                // let skillsJSON = {
+                //     skills: [
+                //         "matlab",
+                //         "python",
+                //         "microsoft office",
+                //         "npm",
+                //         "leadership",
+                //         "bootstrap",
+                //         "git",
+                //         "public speaking",
+                //         "javascript",
+                //         "c++",
+                //         "html5",
+                //         "react.js",
+                //         "css",
+                //         "sql",
+                //     ],
+                // };
+                (skillsJSON) => {
+                    getCompanies(
+                        serverUrl + "/getTopCompanies",
+                        skillsJSON
+                    ).then((data) => {
+                        let comp = data;
+                        // let tempComp = [];
+                        // for (const [key, value] of Object.entries(comp)) {
+                        //     tempComp.push(key);
                         // }
-                        // console.log(companies);
-                    }
-                );
-            });
+                        setCompanies(data);
+                    });
+                }
+            );
     }
 
-    const HandleMore = (event) => {
-        event.preventDefault();
-        navigate("/skills");
+    const HandleMore = (skills, comp) => {
+        // console.log(comp);
+        // event.preventDefault();
+        navigate("/skills", {
+            state: {
+                missing: skills,
+                company: comp,
+            },
+        });
     };
 
     return (
@@ -116,32 +147,48 @@ function Companies() {
                     </div>
                     <Container className="cardGrid">
                         <Grid container spacing={4}>
-                            {cards.map((card) => (
-                                <Grid item key={card} sm={4} m={4}>
+                            {Object.keys(companies).map((keyName, i) => (
+                                <Grid item key={i} sm={4} m={4}>
+                                    {/* {console.log(companies[keyName])} */}
                                     <Card className="card">
                                         <CardMedia
                                             className="cardMedia"
                                             image="https://source.unsplash.com/random"
-                                            title="Company Name"
+                                            title={keyName}
                                         />
                                         <CardContent className="classes.cardContent">
                                             <Typography
                                                 variant="h5"
                                                 gutterBottom
                                             >
-                                                Company description
+                                                {keyName}
+                                            </Typography>
+                                            <Typography>
+                                                Software Engineer
                                             </Typography>
                                             <Typography
                                                 variant="h5"
                                                 gutterBottom
                                             >
-                                                Job
+                                                {"Matched Skills: " +
+                                                    companies[
+                                                        keyName
+                                                    ].matchedSkills.join(", ")}
                                             </Typography>
                                         </CardContent>
                                         <CardActions>
                                             <Button
                                                 color="primary"
-                                                onClick={HandleMore}
+                                                onClick={() => {
+                                                    // console.log(
+                                                    //     companies[keyName].missingSkills
+                                                    // );
+                                                    HandleMore(
+                                                        companies[keyName]
+                                                            .missingSkills,
+                                                        keyName
+                                                    );
+                                                }}
                                             >
                                                 Learn more about this company!
                                             </Button>

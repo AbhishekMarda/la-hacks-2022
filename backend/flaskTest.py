@@ -4,7 +4,10 @@ import json
 import getPeople
 import getCompaniesBasedOnSkills
 from flask import request
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/getSkillsFromId', methods=['GET'])
@@ -14,13 +17,10 @@ def getSkills():
 
 @app.route('/getTopCompanies', methods=['POST'])
 def getTopCompanies():
-    content_type = request.headers.get('Content-Type')
-    if (content_type == 'application/json'):
         jsonStr = request.json
         skills = list(jsonStr['skills'])
         return getCompaniesBasedOnSkills.topMatchingCompanies(skills)
-    else:
-        return 'Content-Type not supported!'
+
 
 @app.route('/getPeopleInCompany', methods=['POST'])
 def getPeopleInCompany():

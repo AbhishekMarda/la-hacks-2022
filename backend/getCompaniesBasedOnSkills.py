@@ -58,8 +58,7 @@ def topMatchingCompanies(skills):
 
     returnDict = dict()
     for j in range(0, COMPANIES):
-        returnDict[companyIdToCompanyName(
-            indexToCommonSkills[j][0])] = companyDict[indexToCommonSkills[j][0]]
+        returnDict[indexToCommonSkills[j][0]] = companyDict[indexToCommonSkills[j][0]]
     return returnDict
 
 
