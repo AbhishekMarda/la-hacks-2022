@@ -49,8 +49,9 @@ def getPeopleAtJob(company, role, subrole, skills):
                     pro_email = email['address']
                 if email['type'] == 'personal':
                     per_email = email['address']
+            company_website = row['job_company_website']
             id_num = row['id']
-            info[id_num] = {"first_name":first_name, "last_name": last_name, "skills":skills, "professional_email":pro_email, "personal_email":per_email}
+            info[id_num] = {"first_name":first_name, "last_name": last_name, "skills":skills, "professional_email":pro_email, "personal_email":per_email, "company_website":company_website}
 
         # print(f"successfully grabbed {len(data)} records from pdl")
         # print(f"{response['total']} total pdl records exist matching this query")
