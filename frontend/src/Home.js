@@ -1,8 +1,9 @@
 import React from "react";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import { Typography, Button} from "@material-ui/core";
+import { Input, Typography, Button, CssBaseline} from "@material-ui/core";
 import {Send} from '@material-ui/icons';
+import './styles/Home.css';
 
 function Home() {
     
@@ -33,19 +34,22 @@ function Home() {
   
     return (
       <div className="Home">
-        <Typography variant ="h2">Find Jobs with (insert name)</Typography>
+        <CssBaseline />
+        <Typography variant ="h3">Find Jobs with Query Compatible</Typography>
         <div className= "form-container" >
           <form onSubmit={HandleSubmit}>
-            <input 
+            <Input>
               onChange = {HandleLinkInputChange}
               value = {inputs.link} 
               type="text" 
-              placeholder="Drop your Linkedin url here"/>
-              <input 
+              placeholder="Drop your Linkedin url here"
+            </Input> 
+            <Input>
               onChange = {HandleJobInputChange}
               value = {inputs.job} 
               type="text" 
-              placeholder="What role are you applying for?"/>
+              placeholder="What role are you applying for?"
+            </Input>
             <Button variant="contained" type="submit"endIcon={<Send/>}>
             Send
             </Button>

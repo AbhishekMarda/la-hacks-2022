@@ -1,4 +1,54 @@
-.Skills {
-  background-color: #93E5E9;
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto+Slab&display=swap");
+.Skills, .Companies, .Connect {
+  background-color: #FCF9EA;
+  font-family: "Roboto Slab", serif;
+}
+
+.Header {
+  font-family: "League Spartan", sans-serif;
+}
+
+.search {
+  margin: auto;
+  padding-top: 10px;
+}
+
+.container {
+  padding: 50px 0 25px 0px;
+}
+
+.nav {
+  background-color: #4877b6;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.logo {
+  height: 20%;
+  width: 20%;
+  float: left;
+}
+
+.link {
+  text-decoration: none;
+  color: #FCF9EA;
+  padding: 0 10px;
+  -webkit-transform: translate(100000px);
+          transform: translate(100000px);
+}
+
+.cardMedia {
+  height: 150px;
+}
+
+.cardGrid {
+  padding: 50px;
+}
+
+.footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=Skills.css.map */

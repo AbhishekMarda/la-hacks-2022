@@ -1,8 +1,9 @@
-import {Link} from "react-router-dom";
-import {Typography, AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container} from "@material-ui/core";
-
-import useStyles from "./styles/CompanyStyles";
+import {Link, Navigate} from "react-router-dom";
+import {useState} from "react";
+import {Typography, AppBar, Button, Card, CardActions, Input, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container} from "@material-ui/core";
 import './styles/Skills.css';
+import {useNavigate} from "react-router-dom";
+import SearchBar from "material-ui-search-bar";
 
 
 const skills = [1,2,3,4];
@@ -10,40 +11,56 @@ const companyRecommended = [1,2,3,4,5];
 
 function Skills() {
 
-    const classes = useStyles();
+    const navigate = useNavigate();
+    const empty = {};
 
+    // let skillsList = search ? skills : empty;
+    let skillsList = skills;
 
+    const [home, setHome] = useState(false);
+    const [search, setSearch] = useState(false);
+
+    const HandleHome =  (event) => {
+        event.preventDefault();
+        setHome(true);
+        navigate("/");
+    };
+
+    const HandleSearch = (event) => {
+        event.preventDefault();
+        setSearch(true);
+    }
 
     return (
         <div className="Skills">
             <CssBaseline />
-                <AppBar position="relative">
+                <AppBar position="relative" className="nav" style={{background: "#4877b6"}}>
                     <Toolbar>
+                        <img src="favicon.ico" alt="Query Compatible" className="logo" onClick={HandleHome}/>
                         <Typography variant = "h6">
-                            Skills
-                            <Link to="/companies">Companies</Link>
-                            <Link to="/skills">Skills</Link>
+                            <Link to="/companies" className="link">Companies</Link>
+                            <Link to="/skills" className="link">Skills</Link>
                         </Typography>
                     </Toolbar>
                 </AppBar>
                 <main>
-                    <div className={classes.container}>
+                    <div className="container">
                         <Container maxWidth="sm">
                             <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
                                 Skills
                             </Typography>
-                            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                                This will display skills that we recommend you apply to.
-                            </Typography>
+                            <div className="search">
+                                <SearchBar placeholder="Search a company!" onChange={HandleSearch}></SearchBar>
+                            </div>
                         </Container>
                     </div>
                     <div>
-                        <Container className={classes.cardGrid}>
+                        <Container className="cardGrid">
                             <Grid container spacing={4} align="center">
-                            {skills.map((skill) =>(
+                            {skillsList.map((skill) =>(
                                 <Grid item key={skill} sm={2} m={6}>
-                                <Card className={classes.card}>
-                                    <CardContent className={classes.cardContent}>
+                                <Card className="card">
+                                    <CardContent className="cardContent">
                                         <Typography variant="h5" gutterBottom>
                                             Javascript
                                         </Typography>
@@ -55,38 +72,38 @@ function Skills() {
                         </Container>
                     </div>
 
-
-
-                    <Container className={classes.cardGrid}>
-                        <Grid container spacing={4}>
-                        {companyRecommended.map((company) =>(
-                            <Grid item key={company} sm={4} m={4}>
-                            <Card className={classes.card}>
-                                <CardMedia 
-                                className={classes.cardMedia}
-                                image="https://source.unsplash.com/random"
-                                title="Company Name"
-                                />
-                                <CardContent className={classes.cardContent}>
-                                    <Typography variant="h5" gutterBottom>
-                                        Company description
-                                    </Typography>
-                                    <Typography variant="h5" gutterBottom>
-                                        Skills you can learn??
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button color="primary">
-                                        Connect with an employee from here!
-                                    </Button> 
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                        ))}
-                        </Grid>
-                    </Container>
+                    <div className="container">
+                        <Container maxWidth="sm">
+                            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                                These are companies you can work towards applying to.
+                            </Typography>
+                        </Container>
+                        <Container className="cardGrid">
+                            <Grid container spacing={4}>
+                            {companyRecommended.map((company) =>(
+                                <Grid item key={company} sm={12} m={4}>
+                                <Card className="card">
+                                    <CardMedia 
+                                    className="cardMedia"
+                                    image="https://source.unsplash.com/random"
+                                    title="Company Name"
+                                    />
+                                    <CardContent className="cardContent">
+                                        <Typography variant="h5" gutterBottom>
+                                            Company description
+                                        </Typography>
+                                        <Typography variant="h5" gutterBottom>
+                                            Skills you can learn??
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            ))}
+                            </Grid>
+                        </Container>
+                    </div>
                 </main>
-                <footer className={classes.footer}>
+                <footer className="footer">
                     <Typography>Developed by blah blah blah</Typography>
                 </footer>
         </div>
