@@ -68,7 +68,7 @@ def companyIdToCompanyName(id):
     SQL_QUERY = \
         f"""
     select * from company
-    where id = \'{id}\'
+    where id = '{id}'
     """
     P = {
         'sql': SQL_QUERY,

@@ -6,14 +6,13 @@ API_KEY = '68f3f06c4beb2b8be603919fb987af9aa791606d17e29e0e6d51c5b1c4bf04ed'
 
 pdl_url = "https://api.peopledatalabs.com/v5/person/enrich"
 
-params = {
-    "api_key": API_KEY,
-    "profile": ["https://www.linkedin.com/in/sanchit1591/"],
-    "min_likelihood": 3
-}
 
-
-def testFunc():
+def idToSkills(id):
+    params = {
+        "api_key": API_KEY,
+        "profile": ["https://www.linkedin.com/in/" + id],
+        "min_likelihood": 3
+    }
     json_response = requests.get(pdl_url,  params=params).json()
 
     if json_response["status"] == 200:
