@@ -153,15 +153,15 @@ function Companies() {
                                     <Card className="card">
                                         <CardMedia
                                             className="cardMedia"
-                                            image="https://source.unsplash.com/random"
-                                            title={keyName}
+                                            image={"https://logo.clearbit.com/"+companies[keyName].website}
+                                            title={companies[keyName].name}
                                         />
                                         <CardContent className="classes.cardContent">
                                             <Typography
                                                 variant="h5"
                                                 gutterBottom
                                             >
-                                                {keyName}
+                                                {companies[keyName].name}
                                             </Typography>
                                             <Typography>
                                                 Software Engineer

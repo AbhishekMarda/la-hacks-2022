@@ -1,3 +1,4 @@
+import time
 import csv
 import requests
 import json
@@ -12,6 +13,8 @@ H = {
     'X-api-key': API_KEY
 }
 
+companiesDict = {'adobe': ['adobe', 'adobe.com'], 'amazon': ['amazon', 'amazon.com'], 'any-service-company': ['any service company', None], 'aut-nomo_23': ['autónomo', 'josevillalobos.es'], 'cisco': ['cisco', 'cisco.com'], 'doordash': ['doordash', 'doordash.com'], 'ebay': ['ebay', 'ebayinc.com'], 'epam-systems': ['epam systems', 'epam.com'], 'facebook': ['facebook', 'facebook.com'], 'fiverr-com': [
+    'fiverr (fiverr.com)', 'fiverr.com'], 'flipkart': ['flipkart', 'flipkart.com'], 'google': ['google', 'google.com'], 'grabapp': ['grab', 'grab.com'], 'lenovo': ['lenovo', 'lenovo.com'], 'linkedin': ['linkedin', 'linkedin.com'], 'mercadolibre': ['mercadolibre.com', 'mercadolibre.com'], 'microsoft': ['microsoft', 'microsoft.com'], 'netsuite': ['netsuite', 'netsuite.com'], 'no-company_8': ['no-company', 'melihelibol.com'], 'nvidia': ['nvidia', 'nvidia.com'], 'paypal': ['paypal', 'paypal.com'], 'red-hat': ['red hat', 'redhat.com'], 'salesforce': ['salesforce', 'salesforce.com'], 'sap': ['sap', 'sap.com'], 'sas': ['sas', 'sas.com'], 'shopee': ['shopee', 'shopee.sg'], 'tencentglobal': ['tencent', 'tencent.com'], 'uber-com': ['uber', 'uber.com'], 'upwork': ['upwork', 'upwork.com'], 'virtusa': ['virtusa', 'virtusa.com'], 'vmware': ['vmware', 'vmware.com'], 'yahoo': ['yahoo', 'yahoo.com'], 'youtube': ['youtube', 'youtube.com']}
 COMPANIES = 10
 
 
@@ -50,16 +53,28 @@ def topMatchingCompanies(skills):
         jsonDict = dict()
         jsonDict['matchedSkills'] = intersection(companySkills, skills)
         jsonDict['missingSkills'] = difference(companySkills, skills)
+        jsonDict['name'] = companiesDict[key][0]
+        jsonDict['website'] = companiesDict[key][1]
         indexToCommonSkills.append((key, len(jsonDict['matchedSkills'])))
         companyDict[key] = jsonDict
 
     indexToCommonSkills = sorted(indexToCommonSkills,
                                  key=lambda x: x[1], reverse=True)
-
     returnDict = dict()
     for j in range(0, COMPANIES):
-        returnDict[indexToCommonSkills[j][0]] = companyDict[indexToCommonSkills[j][0]]
+        returnDict[indexToCommonSkills[j][0]
+                   ] = companyDict[indexToCommonSkills[j][0]]
     return returnDict
+
+
+def companyIdToInfo(companyToSkillDict):
+    idDict = dict()
+
+    for key in companyToSkillDict:
+        idDict[key] = companyIdToCompanyName(key)
+        time.sleep(0.1)
+    print(idDict)
+    return idDict
 
 
 # A function to map company id to company names
@@ -81,15 +96,10 @@ def companyIdToCompanyName(id):
         params=P
     ).json()
 
+    data = []
     if response["status"] == 200:
         record = response['data']
-
-        return json.dumps(record[0]['name'], indent=4)
+        data = [record[0]['name'], record[0]['website']]
+        return data
     else:
-        print(response)
-        return "Error:" + str(response["status"])
-
-
-if __name__ == '__main__':
-    print(pprint.pformat(topMatchingCompanies(
-        ['c++', 'Java', "c#", "python", "lisp"])))
+        return data

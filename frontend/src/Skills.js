@@ -132,8 +132,7 @@ function Skills() {
                                 color="textSecondary"
                                 paragraph
                             >
-                                These are companies you can work towards
-                                applying to.
+                                Some people to connect with:
                             </Typography>
                         </Container>
                         <Container className="cardGrid">
