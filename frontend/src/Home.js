@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import { Input, Typography, Button, CssBaseline, AppBar, Toolbar} from "@material-ui/core";
 import {Send} from '@material-ui/icons';
 import './styles/Home.css';
+import {motion} from "framer-motion";
 
 function Home() {
     
@@ -37,23 +38,27 @@ function Home() {
   
   
     return (
-      <div className="Home">
+      <motion.div id="Home"
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}>
         <CssBaseline/>
-        <div className="imageContainer">
-          <img src="logo_blue_crop.png" alt="Query Compatible" className="image" onClick={HandleHome} style={{}}/>
+        <div id="imageContainer">
+          <img src="logo_blue_crop.png" alt="Query Compatible" className="image" onClick={HandleHome}/>
         </div>
         <main>
           <div className="container">
-            <Typography variant ="h1" className="Header">Find Jobs with Query Compatible</Typography>
-            <Typography variant = "h4" className="subHeader">Make sure that your Linkedin is public!</Typography>
-            <div className= "form-container" >
+            <Typography variant ="h2" id="Header">Find a Career with Query Compatible</Typography>
+            <img src="search.png" alt="Query Compatible" className="image-search"/>
+            <Typography variant = "h4" id="subHeader">Make sure that your Linkedin is public!</Typography>
+            <div className="form-container">
               <form onSubmit={HandleSubmit}>
-                <Input className="input"
+                <Input className="input-first"
                   onChange = {HandleLinkInputChange}
                   value = {inputs.link} 
                   fullWidth
                   type="text" 
-                  placeholder="Drop your Linkedin url here">
+                  placeholder="Drop your Linkedin handle here!">
                 </Input> 
                 <Input className="input"
                   onChange = {HandleJobInputChange}
@@ -63,17 +68,16 @@ function Home() {
                   type="text" 
                   placeholder="What role are you applying for?">
                 </Input>
-                <Button variant="contained" type="submit"endIcon={<Send/>} style={{width:"360px", marginTop: "50px"}}className="button">
-                Send
-                </Button>
+                <div className="submitButton">
+                  <Button variant="contained" type="submit"endIcon={<Send/>} style={{width:"360px", marginTop: "50px", marginBottom:"8%"}}className="button">
+                  Send
+                  </Button>
+                </div>
               </form>
             </div>
           </div>
         </main>
-        <footer className="footer">
-          <Typography style={{align:"center"}}>Developed by blah blah blah</Typography>
-        </footer>
-      </div>
+      </motion.div>
     );
 }
 

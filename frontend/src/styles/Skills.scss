@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto+Slab&display=swap');
 
 $primaryColor: #4877b6;
-$background: #FCF9EA;
+$background: darken(#FCF9EA,10%);
 
 
-.Skills, .Companies, .Connect {
-    background-color: $background;
-    font-family: "Roboto Slab", serif;
-
+.backgroundImage {
+    float:right;
+    position: absolute;
+    width: 35%;
+    opacity: 90%;
+    padding-top: 2%;
+    padding-left: 5%;
+    z-index: 0;
 }
 
-.Header {
+#Skills, #Companies{
+    background-color: $background;
+    font-family: "Roboto Slab", serif;
+}
+
+#Header {
     font-family: "League Spartan", sans-serif;
     color: $primaryColor;
 }
@@ -54,4 +63,36 @@ $background: #FCF9EA;
 
 .footer {
     align-items: center;
+}
+
+#button {
+    float:left;
+    position: absolute;
+    z-index: 5;
+}
+
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    margin:auto;
+}
+
+#imageSkills{
+    height: 20%;
+    width: 20%;
+    float:left;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
+.image {
+    padding-top: 20px;
+}
+
+#skillCard {
+    background-color: $primaryColor;
+    color: white;
+    text-align: center;
+    height: 100px;
+    padding-top: 20px;
 }
