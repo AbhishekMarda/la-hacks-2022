@@ -54,13 +54,12 @@ def getPeopleAtJob(company, role, subrole, skills):
 
         # print(f"successfully grabbed {len(data)} records from pdl")
         # print(f"{response['total']} total pdl records exist matching this query")
-        return json.dumps(info)
+        return info
     else:
         print("NOTE. The carrier pigeons lost motivation in flight. See error and try again.")
         print("error:", response)
-        return "{}"
+        return {}
 
-ret = getPeopleAtJob("microsoft", "engineering", "software", "")
-print(ret)
+
 
 
