@@ -1,4 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto+Slab&display=swap");
 .Home {
   background-color: #93E5E9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header {
+  font-family: "League Spartan", sans-serif;
+}
+
+.container {
+  padding: 50px 0 25px 0px;
+}
+
+.logo {
+  height: 20%;
+  width: 20%;
+  float: left;
+}
+
+.footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=Home.css.map */

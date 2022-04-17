@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto+Slab&display=swap');
+
+$primaryColor: #4877b6;
+$background: #FCF9EA;
+
 .Home {
     background-color: #93E5E9;
+    align-items: center;
+}
+
+.Header {
+    font-family: "League Spartan", sans-serif;
+}
+
+.container {
+    padding: 50px 0 25px 0px;
+}
+
+.logo {
+    height: 20%;
+    width: 20%;
+    float:left;
+}
+
+.footer {
+    align-items: center;
 }
