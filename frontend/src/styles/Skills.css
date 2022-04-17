@@ -6,6 +6,7 @@
 
 .Header {
   font-family: "League Spartan", sans-serif;
+  color: #4877b6;
 }
 
 .search {
@@ -28,6 +29,7 @@
   height: 20%;
   width: 20%;
   float: left;
+  cursor: pointer;
 }
 
 .link {
@@ -43,7 +45,7 @@
 }
 
 .cardGrid {
-  padding: 50px;
+  padding: 10px;
 }
 
 .footer {
