@@ -3,7 +3,9 @@ import requests
 import csv
 import json
 
-API_KEY = ""
+API_KEY = "68f3f06c4beb2b8be603919fb987af9aa791606d17e29e0e6d51c5b1c4bf04ed"
+
+COMPANY_STATS_FILENAME = "Companies.csv"
 
 def getPeopleAtJob(company, role, subrole, skills):
 
@@ -42,9 +44,13 @@ def getPeopleAtJob(company, role, subrole, skills):
             first_name = row['first_name']
             last_name = row['last_name']
             skills = row['skills']
-            emails = row['emails']
+            for email in row['emails']:
+                if email['type'] == 'current_professional':
+                    pro_email = email['address']
+                if email['type'] == 'personal':
+                    per_email = email['address']
             id_num = row['id']
-            info[id_num] = [first_name, last_name, skills, emails, id_num]
+            info[id_num] = {"first_name":first_name, "last_name": last_name, "skills":skills, "professional_email":pro_email, "personal_email":per_email}
 
         # print(f"successfully grabbed {len(data)} records from pdl")
         # print(f"{response['total']} total pdl records exist matching this query")
