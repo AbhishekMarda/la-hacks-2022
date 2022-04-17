@@ -53,7 +53,7 @@ function Companies() {
                         </div>
                         <Container className="cardGrid">
                             <Grid container spacing={4}>
-                            {cards.map((card) =>(
+                            {/* {cards.map((card) =>(
                                 <Grid item key={card} sm={4} m={4}>
                                 <Card className="cardHolder">
                                     <CardMedia 
@@ -76,10 +76,157 @@ function Companies() {
                                     </CardActions>
                                 </Card>
                             </Grid>
-                            ))}
-                            {/* <img src="node.png" className="backgroundImage"/> */}
+                            ))} */}
+                                <Grid item sm={4} m={4} style={{display:"flex"}}>
+                                <Card className="cardHolder">
+                                    <CardMedia 
+                                    className="cardMedia"
+                                    image="google.jpg"
+                                    title="Google"
+                                    />
+                                    <CardContent id="cardContent">
+                                        <Typography variant="h5" gutterBottom>
+                                            Google
+                                        </Typography>
+                                        <Typography variant="h5" gutterBottom>
+                                            Skills: javascript, c++, java, python, sql, mysql, 
+                                             css, algorithms,
+                                            programming, matlab, software development, git, c,
+                                            html, c#,
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="learnMore">
+                                        <Button color="primary" onClick={HandleMore}>
+                                            Learn more about this company!
+                                        </Button> 
+                                    </CardActions>
+                                </Card>
+                                </Grid>
+                                <Grid item sm={4} m={4} style={{display:"flex"}}>
+                                <Card className="cardHolder">
+                                    <CardMedia 
+                                    className="cardMedia"
+                                    image="Microsoft-Logo.png"
+                                    title="Microsoft"
+                                    />
+                                    <CardContent id="cardContent">
+                                        <Typography variant="h5" gutterBottom>
+                                            Microsoft
+                                        </Typography>
+                                        <Typography variant="h5" gutterBottom>
+                                            Skills: javascript, c++, java, python, sql, mysql, 
+                                            css, algorithms,
+                                            programming, software development, git, c,
+                                            html, c#,
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="learnMore">
+                                        <Button color="primary" onClick={HandleMore}>
+                                            Learn more about this company!
+                                        </Button> 
+                                    </CardActions>
+                                </Card>
+                                </Grid>
+                                <Grid item sm={4} m={4} style={{display:"flex"}}>
+                                <Card className="cardHolder">
+                                    <CardMedia 
+                                    className="cardMedia"
+                                    image="amazon.jpg"
+                                    title="Amazon"
+                                    />
+                                    <CardContent id="cardContent">
+                                        <Typography variant="h5" gutterBottom>
+                                            Amazon
+                                        </Typography>
+                                        <Typography variant="h5" gutterBottom>
+                                            Skills: javascript, c++, java, python, sql, mysql, 
+                                            css, algorithms,
+                                            programming,
+                                             software development, git, c,
+                                             html, c#
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="learnMore">
+                                        <Button color="primary" onClick={HandleMore}>
+                                            Learn more about this company!
+                                        </Button> 
+                                    </CardActions>
+                                </Card>
+                                </Grid>
+                                <Grid item sm={4} m={4} style={{display:"flex"}}>
+                                <Card className="cardHolder">
+                                    <CardMedia 
+                                    className="cardMedia"
+                                    image="meta.png"
+                                    title="Meta"
+                                    />
+                                    <CardContent id="cardContent">
+                                        <Typography variant="h5" gutterBottom>
+                                            Meta
+                                        </Typography>
+                                        <Typography variant="h5" gutterBottom>
+                                            Skills: javascript, c++, java, python, sql, mysql, 
+                                             css, algorithms,
+                                            software development, git, c,
+                                             html, c#
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="learnMore">
+                                        <Button color="primary" onClick={HandleMore}>
+                                            Learn more about this company!
+                                        </Button> 
+                                    </CardActions>
+                                </Card>
+                                </Grid>
+                                <Grid item sm={4} m={4} style={{display:"flex"}}>
+                                <Card className="cardHolder">
+                                    <CardMedia 
+                                    className="cardMedia"
+                                    image="infosys.png"
+                                    title="Infosys"
+                                    />
+                                    <CardContent id="cardContent">
+                                        <Typography variant="h5" gutterBottom>
+                                            Infosys
+                                        </Typography>
+                                        <Typography variant="h5" gutterBottom>
+                                            Skills: javascript, c++, java, python, sql, mysql,
+                                            css, algorithms, c, html, c#, software development
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="learnMore">
+                                        <Button color="primary" onClick={HandleMore}>
+                                            Learn more about this company!
+                                        </Button> 
+                                    </CardActions>
+                                </Card>
+                                </Grid>
+                                <Grid item sm={4} m={4} style={{display:"flex"}}>
+                                <Card className="cardHolder">
+                                    <CardMedia 
+                                    className="cardMedia"
+                                    image="people-data-labs.png"
+                                    title="Google"
+                                    />
+                                    <CardContent id="cardContent">
+                                        <Typography variant="h5" gutterBottom>
+                                            People Data Labs
+                                        </Typography>
+                                        <Typography variant="h5" gutterBottom>
+                                            Skills: javascript, c++, java, python, sql, mysql, 
+                                            css, algorithms,
+                                            software development, git, c,
+                                            html, c#
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="learnMore">
+                                        <Button color="primary" onClick={HandleMore} >
+                                            Learn more about this company!
+                                        </Button> 
+                                    </CardActions>
+                                </Card>
+                                </Grid>
                             </Grid>
-                        
                         </Container>
                     </main>
                     {/* <footer className="footer">

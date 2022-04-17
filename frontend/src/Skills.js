@@ -70,8 +70,8 @@ function Skills() {
                     <main>
                         <div className="container">
                             <Container maxWidth="sm">
-                                <Typography variant="h2" align="center" color="textPrimary" gutterBottom id="Header">
-                                    Company Name
+                                <Typography variant="h2" align="center" color="textPrimary" gutterBottom id="Header" style={{paddingBottom:"0px"}}>
+                                    Amazon
                                 </Typography>
                                 {/* <div className="search">
                                     <SearchBar placeholder="Search a company!" onChange={HandleSearch}></SearchBar>
@@ -80,9 +80,12 @@ function Skills() {
                         </div>
                         <div>
                             <Container className="cardGrid">
+                                <Typography variant="h5" align="center" paragraph >
+                                    These are some skills you should learn!
+                                </Typography>
                                 <div className="cardContainer">
                                     <Grid container spacing={4} align="center" className="card">
-                                    {skillsList.map((skill) =>(
+                                    {/* {skillsList.map((skill) =>(
                                         <Grid item key={skill} sm={2} m={6}>
                                         <Card id="skillCard">
                                             <CardContent className="cardContent">
@@ -92,7 +95,61 @@ function Skills() {
                                             </CardContent>
                                         </Card>
                                         </Grid>
-                                    ))}
+                                    ))} */}
+                                        <Grid item sm={2} m={6}>
+                                        <Card id="skillCard">
+                                            <CardContent className="cardContent">
+                                                <Typography variant="h5" gutterBottom>
+                                                    microsoft office
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                        </Grid>
+                                        <Grid item sm={2} m={6}>
+                                        <Card id="skillCard">
+                                            <CardContent className="cardContent">
+                                                <Typography variant="h5" gutterBottom>
+                                                    matlab
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                        </Grid>
+                                        <Grid item sm={2} m={6}>
+                                        <Card id="skillCard">
+                                            <CardContent className="cardContent">
+                                                <Typography variant="h5" gutterBottom>
+                                                    linux
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                        </Grid>
+                                        <Grid item sm={2} m={6}>
+                                        <Card id="skillCard">
+                                            <CardContent className="cardContent">
+                                                <Typography variant="h5" gutterBottom>
+                                                    microsoft excel
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                        </Grid>
+                                        <Grid item sm={2} m={6}>
+                                        <Card id="skillCard">
+                                            <CardContent className="cardContent">
+                                                <Typography variant="h5" gutterBottom>
+                                                    machine learning
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                        </Grid>
+                                        <Grid item sm={2} m={6}>
+                                        <Card id="skillCard">
+                                            <CardContent className="cardContent">
+                                                <Typography variant="h5" gutterBottom>
+                                                    php
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                        </Grid>
                                     </Grid>
                                 </div>
                             </Container>
@@ -100,16 +157,16 @@ function Skills() {
 
                         <div className="container">
                             <Container maxWidth="sm">
-                                {/* <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                                    These are companies you can work towards applying to.
-                                </Typography> */}
+                                <Typography variant="h5" align="center" paragraph>
+                                    Connect with these individuals!
+                                </Typography>
                             </Container>
                             <Container className="cardGrid">
                                 <Grid container spacing={4}>
-                                {companyRecommended.map((company) =>(
+                                {/* {companyRecommended.map((company) =>(
                                     <Grid item key={company} sm={6} m={4}>
                                     <Card className="card">
-                                        <CardMedia 
+                                         <CardMedia 
                                         className="cardMedia"
                                         image="https://source.unsplash.com/random"
                                         title="Company Name"
@@ -123,8 +180,65 @@ function Skills() {
                                             </Typography>
                                         </CardContent>
                                     </Card>
-                                </Grid>
-                                ))}
+                                    </Grid>
+                                ))} */}
+                                    <Grid item sm={4} m={4}>
+                                    <Card className="card">
+                                        <div className="cardImageContainer">
+                                        <CardMedia 
+                                        className="cardPerson"
+                                        image="images.jfif"
+                                        title="Company Name"
+                                        />
+                                        </div>
+                                        <CardContent className="cardContent">
+                                            <Typography variant="h5" gutterBottom>
+                                                Sean Janis
+                                            </Typography>
+                                            <Typography variant="h5" gutterBottom>
+                                                Email: sjanis@amazon.com
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                    </Grid>
+                                    <Grid item sm={4} m={4}>
+                                    <Card className="card">
+                                        <div className="cardImageContainer">
+                                        <CardMedia 
+                                        className="cardPerson"
+                                        image="gandhi.jfif"
+                                        title="Company Name"
+                                        />
+                                        </div>
+                                        <CardContent className="cardContent">
+                                            <Typography variant="h5" gutterBottom>
+                                                Balanji Gandhi
+                                            </Typography>
+                                            <Typography variant="h5" gutterBottom>
+                                                Email: gandhib@amazon.com
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                    </Grid>
+                                    <Grid item sm={4} m={4}>
+                                    <Card className="card">
+                                        <div className="cardImageContainer">
+                                        <CardMedia 
+                                        className="cardPerson"
+                                        image="download.jfif"
+                                        title="Company Name"
+                                        />
+                                        </div>
+                                        <CardContent className="cardContent">
+                                            <Typography variant="h5" gutterBottom>
+                                                Gary Macdonald
+                                            </Typography>
+                                            <Typography variant="h5" gutterBottom>
+                                                Email: garmacdo@amazon.com
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                    </Grid>
                                 </Grid>
                             </Container>
                         </div>

@@ -54,7 +54,16 @@ $background: darken(#FCF9EA,10%);
 }
 
 .cardMedia {
-    height: 150px;
+    margin-top: 50px;
+    margin-left: 25px;
+    height: 200px;
+    width: 50%; 
+}
+
+.cardPerson {
+    margin-top: 50px;
+    height: 300px;
+    width: 50%; 
 }
 
 .cardGrid {
@@ -94,5 +103,31 @@ $background: darken(#FCF9EA,10%);
     color: white;
     text-align: center;
     height: 100px;
-    padding-top: 20px;
+}
+
+.cardHolder {
+    border-radius: 20px;
+}
+
+.MuiCard-root{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.learnMore {
+    align-self: center;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.cardImage {
+    border-radius: 20px;
+}
+
+.cardImageContainer {
+    display: flex;
+    justify-content: center;
 }

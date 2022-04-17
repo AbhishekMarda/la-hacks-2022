@@ -51,7 +51,16 @@
 }
 
 .cardMedia {
-  height: 150px;
+  margin-top: 50px;
+  margin-left: 25px;
+  height: 200px;
+  width: 50%;
+}
+
+.cardPerson {
+  margin-top: 50px;
+  height: 300px;
+  width: 50%;
 }
 
 .cardGrid {
@@ -97,6 +106,45 @@
   color: white;
   text-align: center;
   height: 100px;
-  padding-top: 20px;
+}
+
+.cardHolder {
+  border-radius: 20px;
+}
+
+.MuiCard-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.learnMore {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.cardImage {
+  border-radius: 20px;
+}
+
+.cardImageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=Skills.css.map */
